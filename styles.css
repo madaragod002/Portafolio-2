@@ -1,0 +1,121 @@
+@import url('https://fonts.googleapis.com/css2?family=Playfair+Display:wght@700&family=Roboto&display=swap');
+
+:root {
+  --color-bg: #0a0a0a;
+  --color-text: #e6e1dc;
+  --color-primary: #c49b35;
+  --color-accent: #f3d16b;
+  --color-card-bg: #1a1a1a;
+  --color-shadow: rgba(196, 155, 53, 0.3);
+}
+
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+  font-family: 'Roboto', sans-serif;
+}
+
+body {
+  background-color: var(--color-bg);
+  color: var(--color-text);
+  min-height: 100vh;
+  overflow-x: hidden;
+}
+
+a {
+  color: var(--color-primary);
+  text-decoration: none;
+  transition: color 0.3s ease;
+}
+
+a:hover {
+  color: var(--color-accent);
+}
+
+h1, h2, h3, h4 {
+  font-family: 'Playfair Display', serif;
+}
+
+.container {
+  max-width: 1200px;
+  padding: 1rem 2rem;
+  margin: 0 auto;
+}
+
+button {
+  cursor: pointer;
+  background: var(--color-primary);
+  color: var(--color-bg);
+  border: none;
+  padding: 0.7rem 1.3rem;
+  font-weight: 700;
+  border-radius: 5px;
+  box-shadow: 0 0 10px var(--color-shadow);
+  transition: background 0.3s ease;
+}
+
+button:hover {
+  background: var(--color-accent);
+}
+
+.card {
+  background: var(--color-card-bg);
+  padding: 1.5rem;
+  border-radius: 10px;
+  box-shadow: 0 4px 10px var(--color-shadow);
+  transition: transform 0.3s ease;
+}
+
+.card:hover {
+  transform: translateY(-8px);
+  box-shadow: 0 10px 20px var(--color-shadow);
+}
+
+/* Navbar styles */
+nav {
+  background-color: var(--color-card-bg);
+  box-shadow: 0 2px 8px var(--color-shadow);
+  padding: 1rem 2rem;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+
+nav .logo {
+  font-family: 'Playfair Display', serif;
+  font-size: 1.8rem;
+  color: var(--color-primary);
+}
+
+nav ul {
+  list-style: none;
+  display: flex;
+  gap: 2rem;
+}
+
+nav ul li a {
+  font-weight: 600;
+  font-size: 1rem;
+}
+
+/* Footer */
+footer {
+  margin-top: 3rem;
+  text-align: center;
+  padding: 1rem;
+  font-size: 0.9rem;
+  color: var(--color-primary);
+}
+
+/* Animations */
+.fade-in {
+  opacity: 0;
+  animation: fadeIn 1s forwards;
+}
+
+@keyframes fadeIn {
+  to {
+    opacity: 1;
+  }
+}
